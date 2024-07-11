@@ -3,26 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlantUML.js Basic Example</title>
-    <!-- Require cheerpj dependency -->
-    <script src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script>
-    <!-- Require PlantUML.js -->
-    <script src="https://raw.githubusercontent.com/plantuml/plantuml.js/main/plantuml-wasm/plantuml.js"></script>
   </head>
   <body>
     <img src="loading.png" id="plantuml-diagram" />
-    <script type="text/javascript">
-        plantuml.initialize('https://raw.githubusercontent.com/plantuml/plantuml.js/main/plantuml-wasm/plantuml.js').then(() => {
-            const element = document.getElementById('plantuml-diagram')
-            const pumlContent = `
-                @startuml
-                Bob -> Alice: Hello!
-                @enduml
-            `
-            const url = plantuml.renderPng(pumlContent).then((blob) => {
-                element.src = window.URL.createObjectURL(blob)
-            })
-        })
-    </script>
   </body>
 </html>
